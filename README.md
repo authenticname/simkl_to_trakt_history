@@ -33,7 +33,7 @@ curl --include \
 'https://api.simkl.com/oauth/pin/[user_code]?client_id=[client id]'
 ```
 
-5. Get the JSON:
+5. Get the JSON. This will get every item, including "to watch" items. You can modify this according to the [api docs](https://simkl.docs.apiary.io/):
 
 ```
 curl --include \
