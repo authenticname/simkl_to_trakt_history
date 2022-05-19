@@ -1,18 +1,16 @@
 # simkl_to_trakt_history
-Easily transfer your watch history from Simkl to Trakt
-I didn't bother much with the watch dates. It just takes your "last watched" date on simkl for any given items and sets it as that.
+Easily transfer your watch history from Simkl to Trakt.
 
 Before you can use this, you'll have to create an API app on Trakt. You can do so [here](https://trakt.tv/oauth/applications).
-Edit the .js file to have your API data there, it's at the top, under `let options = ...`
 
 ## Installation
 
-1. Install Node
+1. Install [Node.js](https://nodejs.org/en/)
 2. Download, unzip, and cd into the directory of this repo with a Terminal or Command Line app
-3. Type "npm install" and hit Enter
-4. Type "node simkl_to_trakt_history.js" and follow instructions
+3. Type `npm install` and hit Enter
+4. Type `node simkl_to_trakt_history.js` and follow instructions
 
-You need to have the JSON file from Simkl next to the .js file, I left the name as `Simkl_Everything.json`, but you can change that in the .js file.
+You need to have the JSON file from Simkl next to the .js file, the code will look for a `Simkl_Everything.json` file by default, but you can change that in the .js file.
 
 ## Getting JSON from Simkl:
 
@@ -33,7 +31,7 @@ curl --include \
 'https://api.simkl.com/oauth/pin/[user_code]?client_id=[client id]'
 ```
 
-5. Get the JSON. This will get every item, including "to watch" items. You can modify this according to the [api docs](https://simkl.docs.apiary.io/):
+5. Get the JSON. This will get every item, including "to watch" items, but the script only marks watched episodes as watched anyways:
 
 ```
 curl --include \
@@ -42,3 +40,6 @@ curl --include \
      --header "simkl-api-key: [client id]" \
   'https://api.simkl.com/sync/all-items/?extended=full' > Simkl_Everything.json
 ```
+
+# Remove current Trakt watch history
+Even tho the script can attempt to remove your current Trakt history, it can't handle big histories. If you need to handle big histories, you can use the following two: https://github.com/damienhaynes/TraktRater & https://gist.github.com/hugoboos/68b830aec8e7cab65055
