@@ -6,7 +6,7 @@ Before you can use this, you'll have to create an API app on Simkl [here](https:
 ## Installation
 
 1. Install [Node.js](https://nodejs.org/en/) (minimum version needed is 15.3.0)
-1. Clone or download this repository, unpack if necesarry, `cd` into the directory downloaded/unpacked directory with your command line of choice
+1. Clone or download this repository, unpack if necesarry, `cd` into the downloaded/unpacked directory with your command line of choice
 1. Type ```npm install``` and hit Enter
 1. Type ```node sync.mjs```, hit Enter and follow the instructions
 
