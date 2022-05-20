@@ -2,14 +2,12 @@
   "name": "simkl_to_trakt_history",
   "version": "1.0.0",
   "description": "Easily transfer your watch history from Simkl to Trakt",
-  "main": "simkl_to_trakt.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "iGerman",
+  "main": "sync.mjs",
+  "author": "Authenthic Name",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.4",
+    "node-fetch": "^3.2.4",
     "trakt.tv": "^8.1.1"
   }
 }
