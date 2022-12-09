@@ -1,6 +1,6 @@
 {
   "name": "simkl_to_trakt_history",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily transfer your watch history from Simkl to Trakt",
   "main": "sync.mjs",
   "author": "Authenthic Name",
