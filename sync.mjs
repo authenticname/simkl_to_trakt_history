@@ -65,6 +65,7 @@ async function sync(watched) {
     if (!show.last_watched_at) return;
     traktObject.shows.push(
       {
+        "watched_at": show.last_watched_at,
         "title": show.show.title,
         "year": show.show.year,
         "seasons": show.seasons,
@@ -81,6 +82,7 @@ async function sync(watched) {
     if (!movie.last_watched_at) return;
     traktObject.movies.push(
       {
+        "watched_at": movie.last_watched_at,
         "title": movie.movie.title,
         "year": movie.movie.year,
         "ids": {
@@ -95,6 +97,7 @@ async function sync(watched) {
     if (!anime.last_watched_at) return;
     traktObject.shows.push(
       {
+        "watched_at": anime.last_watched_at,
         "title": anime.show.title,
         "year": anime.show.year,
         "seasons": anime.seasons,
