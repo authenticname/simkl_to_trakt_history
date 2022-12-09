@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.4",
-    "node-fetch": "^3.2.4",
+    "node-fetch": "^3.2.10",
     "trakt.tv": "^8.1.1"
   }
 }
