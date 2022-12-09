@@ -43,7 +43,7 @@ async function getSimklWatched(id) {
   await inquirer.prompt({ type: 'confirm', message: `Authorize the Simkl application via the following URL ${verification_url} by inputting the following code: ${user_code}\nAfter authorizing, come back to the console and hit Enter.`, name: 'confirmation' });
   const { access_token } = await fetch(`https://api.simkl.com/oauth/pin/${user_code}?client_id=${id}`).then(res => res.json());
 
-  const data = await fetch('https://api.simkl.com/sync/all-items/?extended=full', {
+  const data = await fetch('https://api.simkl.com/sync/all-items/?extended=full&episode_watched_at=yes', {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${access_token}`,
